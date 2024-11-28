@@ -1,0 +1,25 @@
+type Product {
+  price: Float
+  quantity: Int
+}
+
+type Customer {
+  email: String
+  fullName: String
+}
+
+type Order {
+  id: String
+  date: String
+  totalAmount: Float
+  customer: Customer
+  products: [Product]
+}
+
+type Query {
+  orders: [Order]
+}
+
+schema {
+  query: Query
+}
